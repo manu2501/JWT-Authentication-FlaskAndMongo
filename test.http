@@ -1,0 +1,66 @@
+POST http://localhost:5000/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "first_name":"Manoj",
+    "last_name" : "Kumar",
+    "email":"manoj2rox@gmail.com",
+    "password":"Manu@2020"
+}
+
+
+
+###
+POST http://localhost:5000/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email":"manoj2rox@gmail.com",
+    "password":"Manu@2020"
+}
+
+
+###
+POST http://localhost:5000/template
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hbm9qMnJveEBnbWFpbC5jb20iLCJleHAiOjE2MTcxMDQ5OTF9.qOyxjTl17IqfvaaAYwDZTsXZN_nx5rV6W5P4cVX840M
+
+{
+    "template_name":"Programming",
+    "subject":"C Language",
+    "body":"Python is an interpreted language"
+}
+
+
+###
+GET http://localhost:5000/template
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hbm9qMnJveEBnbWFpbC5jb20iLCJleHAiOjE2MTcxMDQ5OTF9.qOyxjTl17IqfvaaAYwDZTsXZN_nx5rV6W5P4cVX840M
+
+###
+GET http://localhost:5000/template/60630bacfc3992bcfc253b82
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hbm9qMnJveEBnbWFpbC5jb20iLCJleHAiOjE2MTcxMDQ5OTF9.qOyxjTl17IqfvaaAYwDZTsXZN_nx5rV6W5P4cVX840M
+
+###
+PUT http://localhost:5000/template/606301a58c55a30b2ce3e1e1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hbm9qMnJveEBnbWFpbC5jb20iLCJleHAiOjE2MTcxMDQ5OTF9.qOyxjTl17IqfvaaAYwDZTsXZN_nx5rV6W5P4cVX840M
+
+{
+    "template_name":"Programming",
+    "subject":"C programming",
+    "body":"C is an compiled language"
+}
+
+###
+DELETE http://localhost:5000/template/606301a58c55a30b2ce3e1e1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hbm9qMnJveEBnbWFpbC5jb20iLCJleHAiOjE2MTcxMDQ5OTF9.qOyxjTl17IqfvaaAYwDZTsXZN_nx5rV6W5P4cVX840M
+
+###
+GET http://localhost:5000/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im1hbm9qMnJveEBnbWFpbC5jb20iLCJleHAiOjE2MTcxMDQ5OTF9.qOyxjTl17IqfvaaAYwDZTsXZN_nx5rV6W5P4cVX840M
